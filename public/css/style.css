@@ -8,3 +8,21 @@ body{
     text-align: center;
     color: white;
 }
+.logo-icon{
+height: 60px;
+width: 60px;
+}
+.logo-icon img{
+height: 100%;
+width: 100%;
+}
+.navbar-brand{
+display: flex;
+}
+
+.logo-text h1{
+color: black;
+}
+logo-text{
+    margin-top:50px;
+}
