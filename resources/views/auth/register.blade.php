@@ -4,14 +4,14 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card bg-secondary">
-               
+            <div class="card bg-info">
+
                 <div class="card-body ">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="row mb-3">
-                           
+
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="Nom" autofocus>
 
@@ -31,13 +31,13 @@
                                 @enderror
                             </div>
                         </div>
-                       
+
                         <div class="row mb-3 ">
-                           
+
                             <div class="">
                                 <input id="photo" class="form-control @error('photo') is-invalid @enderror" name="photo" value="{{ old('photo') }}" required autocomplete="photo" placeholder="photo" autofocus type="file" >
-                                
-                                
+
+
 
                                 @error('photo')
                                     <span class="invalid-feedback" role="alert">
@@ -47,7 +47,7 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                           
+
                             <div class="col-md-6">
                                 <input id="sexe" type="text" class="form-control @error('sexe') is-invalid @enderror" name="sexe" value="{{ old('sexe') }}" required autocomplete="sexe" placeholder="sexe" autofocus>
 
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                      <div class="row mb-3">
-                           
+
                             <div class="col-md-6">
                                 <input id="number" type="text" class="form-control @error('number') is-invalid @enderror" name="number" value="{{ old('number') }}" required autocomplete="number" placeholder="Telephone1" autofocus>
 
@@ -88,19 +88,11 @@
                                 @enderror
                             </div>
                         </div>
-                        
-                        <div class="row mb-3">
-                           
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('piece') is-invalid @enderror" name="piece" value="{{ old('piece') }}" required autocomplete="piece" placeholder="Piece d'Identité" autofocus>
 
-                                @error('piece')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                            <div class="col-md-6">
+                        <div class="row mb-3">
+
+
+                            <div class="col-md">
                                 <input id="numeropiece" type="text" class="form-control @error('numeropiece') is-invalid @enderror" name="numeropiece" value="{{ old('numeropiece') }}" required autocomplete="numeropiece" placeholder="Numero de piece d'Identité" autofocus>
 
                                 @error('numeropiece')
