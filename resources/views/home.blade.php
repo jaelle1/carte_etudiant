@@ -5,8 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+                @can('Directeur')
                 <div class="card-header">{{ __('Dashboard') }}</div>
-
+                @endcan
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
