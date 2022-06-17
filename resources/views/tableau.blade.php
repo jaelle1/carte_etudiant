@@ -21,7 +21,7 @@
     <!-- Custom CSS -->
     <link href="{{asset('css/style.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
-    
+
 </head>
 
 <body>
@@ -37,7 +37,7 @@
     <!-- ============================================================= -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
-   
+
         <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
@@ -49,14 +49,21 @@
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
       <x-menu />
-        
-   <div class="page-wrapper">
-    <h1>Hello world</h1>
-    </div>
-   
-    
 
-    
+   <div class="page-wrapper">
+
+
+    <h1>Hello  bonjour</h1>
+    @can('Secretaire')
+
+    <span>Ceci n'est vu que par la secretaire</span>
+    @endcan
+
+    </div>
+
+
+
+
     <!-- ============================================================== -->
     <!-- End Wrapper -->
     <!-- ============================================================== -->
