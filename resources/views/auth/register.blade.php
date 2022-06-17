@@ -22,6 +22,17 @@
                                 @enderror
                             </div>
                            
+                            <div class="">
+                                <input id="photo" class="form-control @error('photo') is-invalid @enderror" name="photo" value="{{ old('photo') }}" required autocomplete="photo" autofocus type="file" >
+                                
+                                
+
+                                @error('photo')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
 
                        
