@@ -18,7 +18,10 @@ Route::get('/', function () {
     return redirect('register');
 });
 Route::get('/dashboard', function () {
-    return view('tableau');
+    return view('dashboard');
+});
+Route::get('/liste', function () {
+    return view('liste_utilisa');
 });
 
 Auth::routes();

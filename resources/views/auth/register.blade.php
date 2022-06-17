@@ -35,7 +35,7 @@
                         <div class="row mb-3 ">
                            
                             <div class="">
-                                <input id="photo" class="form-control @error('photo') is-invalid @enderror" name="photo" value="{{ old('photo') }}" required autocomplete="photo" placeholder="photo" autofocus type="file" >
+                                <input id="photo" class="form-control @error('photo') is-invalid @enderror" name="photo" value="{{ old('photo') }}" required autocomplete="photo" autofocus type="file" >
                                 
                                 
 
