@@ -22,7 +22,6 @@
                                 @enderror
                             </div>
                            
-<<<<<<< HEAD
                             <div class="">
                                 <input id="photo" class="form-control @error('photo') is-invalid @enderror" name="photo" value="{{ old('photo') }}" required autocomplete="photo" autofocus type="file" >
                                 
@@ -34,8 +33,6 @@
                                     </span>
                                 @enderror
                             </div>
-=======
->>>>>>> bf295824cf05cd7ab9aede13417efebc4f165c2b
                         </div>
 
                        
