@@ -21,7 +21,6 @@
     <!-- Custom CSS -->
     <link href="{{asset('css/style.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
-    
 </head>
 
 <body>
@@ -34,10 +33,11 @@
             <div class="lds-pos"></div>
         </div>
     </div>
-    <!-- ============================================================= -->
+    <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
-   
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+        data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
         <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
@@ -48,39 +48,34 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-      <x-menu />
+       <x-menu />
+       
         
-   <div class="page-wrapper">
-    <h1>Hello world</h1>
+        <div class="page-wrapper">
+           
+            <div class="page-breadcrumb bg-white">
+                
+            </div>
+            
+           
+           @yield('content')
+            
+        </div>
+       
+        
     </div>
-   
     
-
     
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
     <script src="{{asset('plugins/bower_components/jquery/dist/jquery.min.js')}}"></script>
-    <!-- Bootstrap tether Core JavaScript -->
     <script src="{{asset('bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('js/app-style-switcher.js')}}"></script>
     <script src="{{asset('plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js')}}"></script>
-    <!--Wave Effects -->
     <script src="{{asset('js/waves.js')}}"></script>
-    <!--Menu sidebar -->
     <script src="{{asset('js/sidebarmenu.js')}}"></script>
-    <!--Custom JavaScript -->
     <script src="{{asset('js/custom.js')}}"></script>
-    <!--This page JavaScript -->
-    <!--chartis chart-->
     <script src="{{asset('plugins/bower_components/chartist/dist/chartist.min.js')}}"></script>
     <script src="{{asset('plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js')}}"></script>
     <script src="{{asset('js/pages/dashboards/dashboard1.js')}}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
 </body>
 
 </html>

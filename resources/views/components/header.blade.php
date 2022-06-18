@@ -1,24 +1,22 @@
- <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
-        data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
 <header class="topbar" data-navbarbg="skin5">
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header" data-logobg="skin6">
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-                    <span class="navbar-brand" >
+                    <a class="navbar-brand" href="dashboard.html">
                         <!-- Logo icon -->
                         <b class="logo-icon">
-                            <!-- Dark Logo icon -->
-                            <img src="{{asset('IMAGES/esi.jpg')}}" alt="logo de esi" class="logoesi " />
-                        </b>
-                        <!--End Logo icon -->
+
+<img src="{{asset('IMAGES/esi.jpg')}}" alt="logo de esi" class="logoesi" width="60" />
+
+</b>
+<span class="text-dark text-center ms-4 fs-5 fw-bold">
+                            ESI/UNB                
+</span>                     <!--End Logo icon -->
                         <!-- Logo text -->
-                        <span class="logo-text mb-20">
-                            <!-- dark Logo text -->
-                            <h1>ESI/UNB</h1>
-                        </span>
-                    </span>
+                        
+                    </a>
                     <!-- ============================================================== -->
                     <!-- End Logo -->
                     <!-- ============================================================== -->

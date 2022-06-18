@@ -26,3 +26,16 @@ color: black;
 logo-text{
     margin-top:50px;
 }
+.table1{ 
+    
+    border-radius:15px;
+ } 
+ td{
+width: 175px;
+ }
+ td.matricule{
+    width: 75px;
+ }
+ th.matricule{
+    width: 75px;
+ }

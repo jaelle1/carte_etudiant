@@ -21,7 +21,13 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 Route::get('/liste', function () {
-    return view('liste_utilisa');
+    return view('userliste');
+});
+Route::get('/etudiant', function () {
+    return view('studentliste');
+});
+Route::get('/addstudent', function () {
+    return view('formulaire');
 });
 
 Auth::routes();
