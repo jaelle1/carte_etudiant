@@ -1,4 +1,4 @@
-@extends("dashboard")
+@extends("layouts.dashboard")
 @section("content")
 <div class="container">
     <div class="row justify-content-center">
@@ -6,7 +6,7 @@
             <div class="card bg-info">
 
                 <div class="card-body ">
-                    <form method="POST" action="">
+                    <form method="POST" action="{{route('Student.store')}}">
                         @csrf
 
                         <div class="row mb-3"> 

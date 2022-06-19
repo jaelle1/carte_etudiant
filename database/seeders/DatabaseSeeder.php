@@ -15,8 +15,8 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    { 
-        User::factory(2)->create();
+    {
+        User::factory(10)->create();
         $this->call(RoleSeeder::class);
         User::find(1)->roles()->attach(1);
         User::find(2)->roles()->attach(2);
@@ -24,5 +24,5 @@ class DatabaseSeeder extends Seeder
     }
 
 
-      
+
     }

@@ -1,4 +1,4 @@
-@extends('dashboard')
+@extends('layouts.dashboard')
 @section('content')
     <div>
     <div class="d-flex justify-content-end mt-2 ajout">

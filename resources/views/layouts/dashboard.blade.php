@@ -17,10 +17,20 @@
     <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
     <!-- Custom CSS -->
     <link href="{{asset('plugins/bower_components/chartist/dist/chartist.min.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css')}}">
+    <link rel="stylesheet"
+        href="{{asset('plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css')}}">
     <!-- Custom CSS -->
     <link href="{{asset('css/style.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('bootstrap-5.1.3-dist/css/bootstrap.min.css')}}">
 </head>
 
 <body>
@@ -48,24 +58,25 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-       <x-menu />
-       
-        
+        <x-menu />
+
+
         <div class="page-wrapper">
-           
+
             <div class="page-breadcrumb bg-white">
-                
+                @yield('content')
+
             </div>
-            
+
+
            
-           @yield('content')
-            
+
         </div>
-       
-        
+
+
     </div>
-    
-    
+
+
     <script src="{{asset('plugins/bower_components/jquery/dist/jquery.min.js')}}"></script>
     <script src="{{asset('bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('js/app-style-switcher.js')}}"></script>
@@ -74,8 +85,15 @@
     <script src="{{asset('js/sidebarmenu.js')}}"></script>
     <script src="{{asset('js/custom.js')}}"></script>
     <script src="{{asset('plugins/bower_components/chartist/dist/chartist.min.js')}}"></script>
-    <script src="{{asset('plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js')}}"></script>
+    <script
+        src="{{asset('plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js')}}"></script>
     <script src="{{asset('js/pages/dashboards/dashboard1.js')}}"></script>
+    <script src="{{ asset('bootstrap-5-1-3-dist/js/bootstrap.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        @include('sweetalert::alert')
+
 </body>
 
 </html>
