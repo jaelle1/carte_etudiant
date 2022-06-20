@@ -6,7 +6,7 @@
             <div class="card bg-info">
 
                 <div class="card-body ">
-                    <form method="POST" action="{{route('Student.store')}}">
+                    <form method="POST" action="{{route('Student.store')}}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="row mb-3"> 
@@ -84,7 +84,7 @@
                                 @enderror
                             </div>
                             <div class="col-md-6">
-                                <input  type="file" class="form-control @error('photo') is-invalid @enderror" name="photo" required autocomplete="photo">
+                                <input  type="file" class="form-control @error('photo') is-invalid @enderror" name="photo" required autocomplete="photo" accept="image/png, image/jpg, image/jpeg">
 
                                 @error('photo')
                                     <span class="invalid-feedback" role="alert">

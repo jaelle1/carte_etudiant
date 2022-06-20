@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
+use App\Models\Student;
 
 class StudentController extends Controller
 {
@@ -35,7 +37,24 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $photo= Storage::disk('local')->put('photos', $request->photo);
+        dd(Storage::get($photo));
+        $request->validate([
+            'matricule' => 'required',
+            'nom' => 'required',
+            'prenom' => 'required',
+            'email' => 'required',
+            'cycle' => 'required',
+            'niveau' => 'required',
+            'annee' => 'required',
+        ]);
+
+        $student = new Student();
+        $student->matricule = $request->matricule;
+        $student->nom = $request->nom;
+        $student->prenom = $request->prenom;
+        $student->email = $request->email;
+        $student->cycle = $request->cycle;
     }
 
     /**
