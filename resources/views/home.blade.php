@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                @can('Directeur')
+                @can('Secretaire')
                 <div class="card-header">{{ __('Dashboard') }}</div>
                 @endcan
                 <div class="card-body">
@@ -17,6 +17,7 @@
 
                     {{ __('You are logged in!') }}
                 </div>
+                
             </div>
         </div>
     </div>
