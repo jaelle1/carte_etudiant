@@ -12,6 +12,7 @@
                                 <span class="hide-menu">Profile</span>
                             </a>
                         </li>
+                        @can('Directeur')
                         <li class="sidebar-item pt-2">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('User.index') }}"
                                 aria-expanded="false">
@@ -21,6 +22,7 @@
 
                             </a>
                         </li>
+                        @endcan
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('Student.index') }}"
                                 aria-expanded="false">

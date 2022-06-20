@@ -26,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('User.create_user');
     }
 
     /**
@@ -37,7 +37,13 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->telephone = $request->telephone;
+        $user->password = $request->password;
+        $user->save();
+        return redirect()->route('User.index');
     }
 
     /**
@@ -82,8 +88,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $users = User::find($id);
+        $users = User::findOrFail($id);
         $users->delete();
-        return redirect()->route('user.index')->with('success', 'User deleted successfully');
+        return redirect()->route('User.index')->with('success', 'User deleted successfully');
     }
 }
