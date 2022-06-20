@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+
 
 class UserController extends Controller
 {
@@ -35,14 +39,26 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    
+    
+     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'telephone' => 'required',
+            'password' => 'required',
+        ]);
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
         $user->telephone = $request->telephone;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);
         $user->save();
+        $user->roles()->attach(Role::where('nom', 'Secretaire')->first());
+
+        
+
         return redirect()->route('User.index');
     }
 

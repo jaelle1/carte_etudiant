@@ -2,7 +2,7 @@
 @section('content')
     <div>
     <div class="d-flex justify-content-end mt-2 ajout">
-    <a href="#" class="btn btn-primary">ajouter un utilisateur</a>
+    <a href="{{ route('Student.create') }}" class="btn btn-primary">ajouter un Etudiant</a>
   </div>
     <table class="table table-bordered border-dark table-hover ">
   <thead class="bg-success">

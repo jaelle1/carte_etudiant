@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +22,11 @@ Route::get('/', function () {
 });
 
 
-Route::resource('Student', UserController::class)->middleware('auth') ;
+Route::resource('Student', StudentController::class)->middleware('auth') ;
 
 
 Route::resource('User', UserController::class)->middleware('auth');
+
 
 Auth::routes();
 
