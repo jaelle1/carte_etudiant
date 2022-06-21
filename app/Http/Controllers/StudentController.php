@@ -37,9 +37,9 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-       $photo= Storage::disk('local')->put('photos', $request->photo);
-        dd(Storage::get($photo));
-        $request->validate([
+       
+        $this->validate(
+            $request,[
             'matricule' => 'required',
             'nom' => 'required',
             'prenom' => 'required',
@@ -47,14 +47,18 @@ class StudentController extends Controller
             'cycle' => 'required',
             'niveau' => 'required',
             'annee' => 'required',
+            'photo' => 'required'
         ]);
+        $path_image = $request->photo->store("Student");
 
-        $student = new Student();
-        $student->matricule = $request->matricule;
-        $student->nom = $request->nom;
-        $student->prenom = $request->prenom;
-        $student->email = $request->email;
-        $student->cycle = $request->cycle;
+        Student::create([
+        "matricule" => $request->matricule,
+        "nom" => $request->nom,
+        "prenom" => $request->prenom,
+        "email"=> $request->email,
+        "cycle" => $request->cycle]);
+
+        return redirect()->route("Student.create");
     }
 
     /**
