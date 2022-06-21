@@ -51,12 +51,18 @@ class StudentController extends Controller
         ]);
         $path_image = $request->photo->store("Student");
 
-        Student::create([
-        "matricule" => $request->matricule,
-        "nom" => $request->nom,
-        "prenom" => $request->prenom,
-        "email"=> $request->email,
-        "cycle" => $request->cycle]);
+       Student::create([
+    "matricule" => $request->matricule,
+    "nom" => $request->nom,
+    "prenom" => $request->prenom,
+    "email"=> $request->email,
+    "cycle" => $request->cycle,
+    "niveau" => $request->niveau,
+    "annee" => $request->annee,
+    "photo" => $path_image,
+
+]);
+    
 
         return redirect()->route("Student.create");
     }
