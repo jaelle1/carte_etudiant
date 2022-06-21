@@ -39,3 +39,67 @@ width: 175px;
  th.matricule{
     width: 75px;
  }
+
+ /* css de la carte */
+ body{
+    margin: 0;
+    padding: 0;
+ }
+ .carte{
+     margin-top: 50px;
+     border: solid 2px black;
+     border-radius: 15px;
+     height: 250px;
+     width: 400px;
+ }
+ .licence{
+     font-weight: bold;
+     font-size: 15px;
+     text-align: center;
+     margin-top: 5px;
+ }
+ .image{
+     height: 70px;
+     width: 80px;
+ }
+ .image img{
+     height: 100%;
+     width: 100%;
+ }
+ .texte{
+     color: red;
+     font-weight: bold;
+     font-size: 15px;
+     
+     text-align: center;
+    
+ }
+ .photo{
+     height: 110px;
+     width: 110px;
+    
+     
+ }
+ .photo img{
+     height: 109px;
+     width: 100px;
+ }
+ .element{
+     
+     margin-top: 22px;
+     font-weight: bold;
+     font-size: 15px;
+ 
+     
+ }
+ 
+ .etudiant h6 { 
+     font-weight: bold;
+     font-size: 15px;
+  }
+  span{
+     margin-bottom: 15px;
+     text-align: center;
+     font-weight: bold;
+     
+  }

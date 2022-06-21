@@ -1,7 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,21 +18,16 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    return redirect('register');
+    return view('auth.login');
 });
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-Route::get('/liste', function () {
-    return view('userliste');
-});
-Route::get('/etudiant', function () {
-    return view('studentliste');
-});
-Route::get('/addstudent', function () {
-    return view('formulaire');
-});
+
+
+Route::resource('Student', StudentController::class)->middleware('auth') ;
+
+
+Route::resource('User', UserController::class)->middleware('auth');
+
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');

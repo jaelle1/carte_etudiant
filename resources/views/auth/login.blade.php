@@ -60,11 +60,11 @@
                                 </button>
 
 
-                                @if (Route::has('password.request'))
+                                <!-- @if (Route::has('password.request'))
                                 <a class="btn btn-link text-dark" href="{{ route('password.request') }}">
                                     {{ __('Mot de Passe Oublié?') }}
                                 </a>
-                                @endif
+                                @endif -->
                             </div>
                         </div>
                     </form>

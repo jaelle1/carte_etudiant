@@ -9,26 +9,30 @@
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="profile.html"
                                 aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="hide-menu">Profile</span>
+                           <span >{{ Auth::user()->name }}</span>
+
+                                
                             </a>
                         </li>
+                        @can('Directeur')
                         <li class="sidebar-item pt-2">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="bank.html"
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('User.index') }}"
                                 aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span class="hide-menu">Gerer les utilisateurs</span>
-                                
-                                
+
+
                             </a>
                         </li>
+                        @endcan
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="basic-table.html"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('Student.index') }}"
                                 aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
                                 <span class="hide-menu">Gerer les etudiants</span>
                             </a>
                         </li>
-                        
+
                     </ul>
 
                 </nav>
