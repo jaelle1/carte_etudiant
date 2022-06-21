@@ -35,7 +35,6 @@
                     <!-- ============================================================== -->
                     <!-- Right side toggle and nav items -->
                     <!-- ============================================================== -->
-<<<<<<< HEAD
                     <ul class="navbar-nav ms-auto d-flex align-items-center">
 
                         </ul>
@@ -65,7 +64,6 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-=======
                    
                      <ul class="navbar-nav ms-auto d-flex align-items-center">
                         <li class=" in">
@@ -99,7 +97,6 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"> -->
->>>>>>> 80057eece92ca21e6ec5d5b8e40463dd277dba15
                                     <a class="dropdown-item bg-danger rounded text-light fw-bold "
                                         href="{{ route('logout') }}" onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">
@@ -109,7 +106,6 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
-<<<<<<< HEAD
                                 </div>
                             </li>
                             @endguest
@@ -120,7 +116,6 @@
     </div>
     </nav>
         </header>
-=======
                                 <!-- </div> -->
                             </li>
                             @endguest
@@ -129,4 +124,3 @@
             </nav>
             </div>
         </header>
->>>>>>> 80057eece92ca21e6ec5d5b8e40463dd277dba15

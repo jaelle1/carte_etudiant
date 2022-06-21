@@ -3,7 +3,7 @@
     <div>
     <div class="d-flex justify-content-end mt-2 ajout">
     <a href="{{ route('Student.create') }}" class="btn btn-primary">ajouter un Etudiant</a>
-    <a href="{{ route('Student.carte') }}" class="btn btn-success">CARTE</a>
+    <a href="{{ route('Student.create') }}" class="btn btn-success">CARTE</a>
 
   </div>
     <table class="table table-bordered border-dark table-hover ">

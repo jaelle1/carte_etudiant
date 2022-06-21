@@ -63,8 +63,9 @@
 
         <div class="page-wrapper">
 
-            <div class="page-breadcrumb bg-white">
-                @yield('content')
+            <div class="page-breadcrumb ">
+            @yield('content')
+               
 
             </div>
 

@@ -1,5 +1,7 @@
 @extends("layouts.dashboard")
 @section("content")
+<div class="container col-12">
+    
 <div class="container carte">
         <div class="row">
             <div class="col-md-2 image">
@@ -35,6 +37,7 @@
        
     </div>
     
+    </div>
     </div>
 
 

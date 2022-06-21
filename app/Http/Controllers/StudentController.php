@@ -26,7 +26,9 @@ class StudentController extends Controller
      */
     public function create()
     {
-        return view('Student.formulaire');
+        // return view('Student.formulaire');
+        return view('Student.carte');
+
     }
 
     /**
@@ -65,7 +67,7 @@ class StudentController extends Controller
      */
     public function show($id)
     {
-        //
+//        
     }
 
     /**
@@ -101,8 +103,5 @@ class StudentController extends Controller
     {
         //
     }
-    public function carte()
-    {
-        return view('Student.carte');
-    }
+   
 }
