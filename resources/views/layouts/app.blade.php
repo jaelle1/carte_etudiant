@@ -48,32 +48,33 @@
                             @guest
                             @if (Route::has('login'))
                             <li class="nav-item">
-                                <a class="nav-link bg-primary rounded text-light fw-bold me-1 "
-                                    href="{{ route('login') }}">{{ __('CONNECTION') }}</a>
+                                <a class="nav-link bg-primary rounded text-light fw-bold me-1 " href="{{ route('login') }}">{{ __('CONNECTION')
+                                    }}</a>
                             </li>
                             @endif
+                            
                             @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link bg-success rounded text-light fw-bold"
-                                    href="{{ route('register') }}">{{ __('INSCRIPTION') }}</a>
+                                <a class="nav-link bg-success rounded text-light fw-bold" href="{{ route('register') }}">{{ __('INSCRIPTION') }}</a>
                             </li>
                             @endif
                             @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                <!-- <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                                {{ Auth::user()->name }}
+                                                            </a>
+                            
+                                                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"> -->
+                                <a class="dropdown-item bg-danger rounded text-light fw-bold " href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                                                         document.getElementById('logout-form').submit();">
+                                    {{ __('DECONNEXION') }}
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item bg-danger rounded text-light fw-bold "
-                                        href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                             document.getElementById('logout-form').submit();">
-                                        {{ __('DECONNEXION') }}
-                                    </a>
-                                    <form id="logout-form" action="{{ route('login') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
+                            
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                                <!-- </div> -->
                             </li>
                             @endguest
                         </ul>

@@ -16,7 +16,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        return view('Student.studentliste');
+        $students=Student::paginate(8);
+        return view('Student.studentliste', compact('students'));
     }
 
     /**
@@ -27,6 +28,7 @@ class StudentController extends Controller
     public function create()
     {
         return view('Student.formulaire');
+
     }
 
     /**
@@ -37,34 +39,37 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-       
-        $this->validate(
-            $request,[
-            'matricule' => 'required',
+
+            $request->validate([
             'nom' => 'required',
             'prenom' => 'required',
             'email' => 'required',
             'cycle' => 'required',
             'niveau' => 'required',
             'annee' => 'required',
-            'photo' => 'required'
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-        $path_image = $request->photo->store("Student");
+        $path = 'public/photos/';
+        $file = $request->file('photo')->getClientOriginalName();
+        $request->file('photo')->storeAs($path, $file);
 
-       Student::create([
-    "matricule" => $request->matricule,
-    "nom" => $request->nom,
-    "prenom" => $request->prenom,
-    "email"=> $request->email,
-    "cycle" => $request->cycle,
-    "niveau" => $request->niveau,
-    "annee" => $request->annee,
-    "photo" => $path_image,
+        $student = new Student();
+            $student->matricule = $request->annee.substr(0,4).$request->prenom[0].$request->nom[0].rand(2,9999);
+            $student->nom = $request->nom;
+            $student->prenom = $request->prenom;
+            $student->email = $request->email;
+            $student->cycle = $request->cycle;
+            $student->niveau = $request->niveau;
+            $student->annee = $request->annee;
+            $student->photo = $file;
+            $student->save();
 
-]);
-    
 
-        return redirect()->route("Student.create");
+
+
+
+
+        return redirect()->route("Student.index");
     }
 
     /**
@@ -75,8 +80,10 @@ class StudentController extends Controller
      */
     public function show($id)
     {
-        //
+        $student=Student::find($id);
+        return view('Student.carte', compact('student'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -109,6 +116,8 @@ class StudentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $student= Student::find($id);
+        $student->delete();
+        return redirect()->route('Student.index')->with('success', 'Student deleted successfully');
     }
 }

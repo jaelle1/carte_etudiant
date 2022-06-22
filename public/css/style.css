@@ -39,3 +39,25 @@ width: 175px;
  th.matricule{
     width: 75px;
  }
+
+/* carte css */
+
+ .carte{
+    margin-top: 50px;
+    border: solid 2px black;
+    border-radius: 15px;
+}
+
+.image{
+    height: 70px;
+    width: 80px;
+}
+.image img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+

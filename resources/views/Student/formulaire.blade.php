@@ -8,27 +8,16 @@
                 <div class="card-body ">
                     <form method="POST" action="{{route('Student.store')}}" enctype="multipart/form-data">
                         @csrf
+                @method('POST')
 
-                        <div class="row mb-3"> 
 
-                            <div class="col-md">
-                                <input id="matricule" type="text" class="form-control @error('matricule') is-invalid @enderror" name="matricule"  required autocomplete="matricule" placeholder="N° matricule" autofocus>
-
-                                @error('matricule')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                           
-                           
-                        </div>
+                        
                         <div class="row mb-3">
 
                             <div class="col-md">
-                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name"  required autocomplete="name" placeholder="Nom" autofocus>
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="nom"  required autocomplete="name" placeholder="Nom" autofocus>
 
-                                @error('name')
+                                @error('nom')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -51,7 +40,7 @@
 
                            
                             <div class="col-md">
-                                <input  type="text" class="form-control @error('cycle') is-invalid @enderror" name="cycle"  placeholder="cycle" required autocomplete="cycle">
+                                <input  type="text" class="form-control @error('cycle') is-invalid @enderror" name="cycle"  placeholder="cycle" required autocomplete="cycle" value="License">
 
                                 @error('cycle')
                                     <span class="invalid-feedback" role="alert">
@@ -60,9 +49,9 @@
                                 @enderror
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control @error('niveau_etude') is-invalid @enderror" name="niveau_etude" placeholder="niveau d'etude" required autocomplete="niveau_etude">
+                                <input type="text" class="form-control @error('niveau_etude') is-invalid @enderror" name="niveau" placeholder="niveau d'etude" required autocomplete="niveau_etude" value="1">
 
-                                @error('niveau_etude')
+                                @error('niveau')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -75,7 +64,7 @@
                         <div class="row mb-3">
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control @error('annee') is-invalid @enderror" name="annee" placeholder="Année academique" required autocomplete="annee_academique">
+                                <input type="text" class="form-control @error('annee') is-invalid @enderror" name="annee" placeholder="Année academique" required autocomplete="annee" value="2021-2022">
 
                                 @error('annee')
                                     <span class="invalid-feedback" role="alert">

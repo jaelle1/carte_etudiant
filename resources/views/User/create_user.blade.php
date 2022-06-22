@@ -9,6 +9,8 @@
                 <div class="card-body ">
                     <form method="POST" action="{{ route('User.store') }}">
                         @csrf
+                @method('POST')
+
 
                         <div class="row mb-3">
 
