@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Student;
 use Barryvdh\DomPDF\Facade as PDF;
 
-
 class pdfController extends Controller
 {
     public function pdfView($id = null)
