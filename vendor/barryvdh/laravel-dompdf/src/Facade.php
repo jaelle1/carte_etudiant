@@ -9,4 +9,5 @@ use Barryvdh\DomPDF\Facade\Pdf as PdfFacade;
  */
 class Facade extends PdfFacade
 {
+    //
 }

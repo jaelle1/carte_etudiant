@@ -208,9 +208,12 @@ return [
     |
     */
 
-    'aliases' => Facade::defaultAliases()->merge([
-        // 'ExampleClass' => App\Example\ExampleClass::class,
-        "PDF" => Barryvdh\DomPDF\Facade::class
-        ])->toArray(),
+    'aliases' =>
+    [
+        // ...,
+        // Façade DomPDF
+        "PDF" => Barryvdh\DomPDF\Facade::class,
+    ],
+    
 
 ];

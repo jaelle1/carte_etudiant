@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('niveau');
             $table->string('annee');
             $table->string('photo');
+            $table->timestamps();
     });
 
 
