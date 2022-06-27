@@ -19,8 +19,7 @@
     <!-- Custom CSS -->
     <link href="{{asset('css/style.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
+    <script src="{{ asset('js/app.js') }}"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -28,10 +27,14 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('bootstrap-5.1.3-dist/css/bootstrap.min.css')}}">
+    <script src="{{asset('plugins/bower_components/jquery/dist/jquery.min.js')}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{asset('js/index.js')}}"defer></script>
+
 </head>
 
 <body>
-    <canvas class="container carte col-md-4" style="height: 250px;" id="contain">
+    <div class="container carte col-md-4" style="height: 250px;" id="contain">
         <div class="row">
             <div class="col-md-3 image">
                 <b class="logo-icon">
@@ -73,29 +76,22 @@
         <div class="row mt-4">
             <span class="text-center fw-bold" style="font-size: 15px;">www.unb.esi.carteetudiant@gmail.com</span>
         </div>
-        </div>
+    </div>
 
-    </canvas>
+    </div>
 
     </div>
     <div class="row">
         <div class="col-md-12">
-            <button onclick="downloadPDF()" class="fw-bold btn btn-primary">Carte</button>
+            <button id="downloadPDF" class="fw-bold btn btn-primary">Carte</button>
         </div>
 
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js" integrity="sha512-dw+7hmxlGiOvY3mCnzrPT5yoUwN/MRjVgYV7HGXqsiXnZeqsw1H9n9lsnnPu4kL2nx2bnrjFcuWK+P3lshekwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        function downloadPDF() {
-            const container = document.getElementById("contain")
-            const container_img = container.toDataURL('image/jpeg', 1.1)
-            console.log(container_img)
 
-
-
-        }
     </script>
+
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
