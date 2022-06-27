@@ -1,49 +1,3 @@
-<<<<<<< HEAD
-@extends("layouts.dashboard")
-@section("content")
-<div class="container col-12">
-    
-<div class="container carte">
-        <div class="row">
-            <div class="col-md-2 image">
-                <img src="IMAGES/esi.jpg" alt="">
-            </div>
-            <div class="col licence">
-                <h3 class="licence">LICENCE ANALYSE ET PROGRAMMATION</h3>
-                <h6 class="texte ">Carte d'étudiant &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2021-2022 </h6>
-            </div>
-        </div>
-        
-       <div class="row element">
-            <div class="col-md-2 photo">
-<img src="IMAGES/foto.PNG" alt="" srcset="">
-            </div>
-            <div class="etudiant col-md-3 " >
-               <h6>etudiant(e):</h6>
-               <h6>Matricule:</h6>
-                    <h6>Niveau:</h6>
-                    <h6>Cycle:</h6>
-            </div>
-            
-                <div class="col me-2">
-                    <h6>kientega brigitte</h6>
-                    <h6>k125492</h6>
-                     <h6>licence2 </h6>
-                      <h6>premier cycle </h6>
-               </div>
-       </div>
-       <div class="row">
-        <span>www.unb.esi.carteetudiant@gmail.com</span>
-       </div>
-       
-    </div>
-    
-    </div>
-    </div>
-
-
-@endsection
-=======
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -98,7 +52,7 @@
             <div class="col-md-2" style="height: 110px; width: 110px;">
                 <b class="logo-icon">
 
-                    <img src="{{asset('IMAGES/photos/'. $student->photo)}}" alt="logo de esi" class="logoesi" width="125" />
+                    <img src="{{asset('IMAGES/photos/'.$student->photo)}}" alt="logo de esi" class="logoesi" width="125" />
 
                 </b>
             </div>
@@ -131,22 +85,10 @@
 
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js" integrity="sha512-dw+7hmxlGiOvY3mCnzrPT5yoUwN/MRjVgYV7HGXqsiXnZeqsw1H9n9lsnnPu4kL2nx2bnrjFcuWK+P3lshekwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        function downloadPDF() {
-            const container = document.getElementById("contain")
-            const container_img = container.toDataURL('image/jpeg', 1.1)
-            console.log(container_img)
+   
 
 
-
-        }
-    </script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+   
 </body>
 
 </html>
->>>>>>> 23a1ce9bc1a64bfd2c90d16c5168017a788e332f

@@ -21,7 +21,7 @@
                                     </span>
                                 @enderror
                             </div>
-                           
+                        </div>
                            
                         
 
@@ -44,7 +44,7 @@
                                 
                                     <div class="col-md">
                                         <input id="telephone" type="tel" class="form-control @error('telephone') is-invalid @enderror" name="telephone"
-                                            value="{{ old('telephone') }}" placeholder="Adresse Email" required autocomplete="telephone">
+                                            value="{{ old('telephone') }}" placeholder="numero telephone" required autocomplete="telephone">
                                 
                                         @error('telephone')
                                         <span class="invalid-feedback" role="alert">

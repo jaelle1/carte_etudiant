@@ -86,13 +86,9 @@ class StudentController extends Controller
      */
     public function show($id)
     {
-<<<<<<< HEAD
-//        
-=======
         $student = Student::find($id);   
         return view('Student.carte', compact('student'));
        
->>>>>>> 23a1ce9bc1a64bfd2c90d16c5168017a788e332f
     }
 
 
@@ -131,9 +127,5 @@ class StudentController extends Controller
         $student->delete();
         return redirect()->route('Student.index')->with('success', 'Student deleted successfully');
     }
-<<<<<<< HEAD
-   
-=======
     
->>>>>>> 23a1ce9bc1a64bfd2c90d16c5168017a788e332f
 }

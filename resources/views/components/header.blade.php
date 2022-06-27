@@ -22,73 +22,15 @@
                 <!-- ============================================================== -->
                 <!-- End Logo -->
                 <!-- ============================================================== -->
-<<<<<<< HEAD
-                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
-                   
-                    <!-- ============================================================== -->
-                    <!-- Right side toggle and nav items -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav ms-auto d-flex align-items-center">
-
-                        </ul>
-
-                        <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav ms-auto">
-                            <!-- Authentication Links -->
-                            @guest
-                            @if (Route::has('login'))
-                            <li class="nav-item">
-                                <a class="nav-link bg-primary rounded text-light fw-bold me-1 "
-                                    href="{{ route('login') }}">{{ __('CONNECTION') }}</a>
-                            </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link bg-success rounded text-light fw-bold"
-                                    href="{{ route('register') }}">{{ __('INSCRIPTION') }}</a>
-                            </li>
-                            @endif
-                            @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                   
-                     <ul class="navbar-nav ms-auto d-flex align-items-center">
-                        <li class=" in">
-                            <form role="search" class="app-search d-none d-md-block me-3">
-                                <input type="text" placeholder="Search..." class="form-control mt-0">
-                                <a href="" class="active">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </form>
-                        </li>
-                            <!-- Authentication Links -->
-                            @guest
-                            @if (Route::has('login'))
-                            <li class="nav-item">
-                                <a class="nav-link bg-primary rounded text-light fw-bold me-1 "
-                                    href="{{ route('login') }}">{{ __('CONNECTION') }}</a>
-                            </li>
-                            @endif
-=======
                 <!-- ============================================================== -->
                 <!-- toggle and nav items -->
                 <!-- ============================================================== -->
                 <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
             </div>
-            <!-- ============================================================== -->
-            <!-- End Logo -->
-            <!-- ============================================================== -->
+           
             <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
 
-                <!-- ============================================================== -->
-                <!-- Right side toggle and nav items -->
-                <!-- ============================================================== -->
+               
 
                 <ul class="navbar-nav ms-auto d-flex align-items-center">
                     <li class=" in">
@@ -99,8 +41,7 @@
                             </a>
                         </form>
                     </li>
-                    <!-- Authentication Links -->
->>>>>>> 23a1ce9bc1a64bfd2c90d16c5168017a788e332f
+                    
 
 
                     
@@ -111,29 +52,6 @@
                             {{ __('DECONNEXION') }}
                         </a>
 
-<<<<<<< HEAD
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                            @endguest
-                        </ul>
-                    </div>
-                </div>
-
-    </div>
-    </nav>
-        </header>
-                                <!-- </div> -->
-                            </li>
-                            @endguest
-                        </ul>
-                </div>
-            </nav>
-            </div>
-        </header>
-=======
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
@@ -145,4 +63,3 @@
         </nav>
     </div>
 </header>
->>>>>>> 23a1ce9bc1a64bfd2c90d16c5168017a788e332f
