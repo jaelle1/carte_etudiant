@@ -30,8 +30,8 @@ class StudentController extends Controller
      */
     public function create()
     {
-        // return view('Student.formulaire');
-        return view('Student.carte');
+        return view('Student.formulaire');
+        // return view('Student.carte');
 
     }
 
