@@ -28,5 +28,6 @@ Route::resource('Student', StudentController::class)->middleware('auth');
 Route::resource('User', UserController::class)->middleware('auth');
 Route::get('/pdf/{id}', [pdfController::class, 'pdfView'])->name('pdfView');
 Route::get('/convert', [pdfController::class, 'pdfConvert'])->name('pdfConvert');
+Route::get('/bar', [testController::class, 'bar'])->name('emails.test');
 
 Auth::routes();

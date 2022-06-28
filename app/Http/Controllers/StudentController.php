@@ -127,5 +127,9 @@ class StudentController extends Controller
         $student->delete();
         return redirect()->route('Student.index')->with('success', 'Student deleted successfully');
     }
+public function bar()
+{
+return view('test');
+}
     
 }
