@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                @can('Secretaire')
+                @can('Directeur')
                 <div class="card-header">{{ __('Dashboard') }}</div>
                 @endcan
                 <div class="card-body">

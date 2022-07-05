@@ -27,5 +27,9 @@ class HomeController extends Controller
         
        return view('home');
     }
-    
+    public function mess()
+{
+Mail::to('sylvat160@gmail.com')->send(new Testmail());
+return view('test');
+}
 }

@@ -24,11 +24,7 @@ return view('test.foo');
 }
 
 
-public function bar()
-{
-Mail::to ('naboure@gmail.com')->send('new Testmail()');
-return view('test.bar');
-}
+
 }
 
 

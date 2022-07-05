@@ -66,7 +66,7 @@ class StudentController extends Controller
         $extension = $file->getClientOriginalExtension();
         $filename = time() . '.' . $extension;
         $file->move('IMAGES/photos/', $filename);
-        $student->photo = $filename;
+        $student->photo = $filename; 
 
         $student->save();
 
@@ -100,7 +100,7 @@ class StudentController extends Controller
      */
     public function edit($id)
     {
-        //
+       
     }
 
     /**
@@ -112,7 +112,9 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $student = Student::find($id);
+        return view('Student.formulaire', compact('student'));
+
     }
 
     /**
@@ -127,9 +129,6 @@ class StudentController extends Controller
         $student->delete();
         return redirect()->route('Student.index')->with('success', 'Student deleted successfully');
     }
-public function bar()
-{
-return view('test');
-}
+   
     
 }

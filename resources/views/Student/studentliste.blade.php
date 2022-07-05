@@ -43,7 +43,12 @@
           <td>{{ $student -> annee }}</td>
           <td>{{ $student -> email }}</td>
           <td>
-            <a href="{{ route('Student.edit', $student->id) }}"><i class="fas fa-edit"></i></a>
+          <form action="{{ route('Student.update', $student->id) }}" method="POST">
+              @csrf
+              @method('PUT')
+              <button type="submit" class="fas fa-edit"></button>
+            </form>
+            <!-- <a href="{{ route('Student.update', $student->id) }}"><i class="fas fa-edit"></i></a> -->
             <a href="{{ route('pdfView',['id' => $student->id]) }}"><i class="fas fa-eye"></i></a>
 
             <form action="{{ route('Student.destroy', $student->id) }}" method="POST">

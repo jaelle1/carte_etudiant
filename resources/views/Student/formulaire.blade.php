@@ -25,7 +25,7 @@
                         <div class="row mb-3">
 
                             <div class="col-md">
-                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="nom" required autocomplete="name" placeholder="Nom" autofocus>
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="nom" required autocomplete="name" placeholder="Nom" value= "{{student?$student->nom}}" autofocus>
 
                                 @error('nom')
                                 <span class="invalid-feedback" role="alert">
@@ -34,7 +34,7 @@
                                 @enderror
                             </div>
                             <div class="col-md">
-                                <input type="text" class="form-control @error('prenom') is-invalid @enderror" name="prenom" required autocomplete="prenom" placeholder="Prenom" autofocus>
+                                <input type="text" class="form-control @error('prenom') is-invalid @enderror" name="prenom" required autocomplete="prenom" placeholder="Prenom" value= "{{$student->prenom}}"autofocus>
 
                                 @error('prenom')
                                 <span class="invalid-feedback" role="alert">
@@ -50,7 +50,7 @@
 
 
                             <div class="col-md">
-                                <input type="email" class="form-control @error('cycle') is-invalid @enderror" name="email" placeholder="email" required autocomplete="email">
+                                <input type="email" class="form-control @error('cycle') is-invalid @enderror" name="email" placeholder="email" required autocomplete="email" value= "{{$student->email}}">
 
                                 @error('cycle')
                                 <span class="invalid-feedback" role="alert">
@@ -66,7 +66,7 @@
 
 
                             <div class="col-md">
-                                <input type="text" class="form-control @error('cycle') is-invalid @enderror" name="cycle" placeholder="cycle" required autocomplete="cycle" value="License">
+                                <input type="text" class="form-control @error('cycle') is-invalid @enderror" name="cycle" placeholder="cycle" required autocomplete="cycle" value="Licence" value= "{{$student->licence}}">
 
                                 @error('cycle')
                                 <span class="invalid-feedback" role="alert">
@@ -75,7 +75,7 @@
                                 @enderror
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control @error('niveau_etude') is-invalid @enderror" name="niveau" placeholder="niveau d'etude" required autocomplete="niveau_etude" value="1">
+                                <input type="text" class="form-control @error('niveau_etude') is-invalid @enderror" name="niveau" placeholder="niveau d'etude" required autocomplete="niveau_etude" value="premiere annee" value= "{{$student->niveau}}">
 
                                 @error('niveau')
                                 <span class="invalid-feedback" role="alert">
@@ -90,7 +90,7 @@
                         <div class="row mb-3">
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control @error('annee') is-invalid @enderror" name="annee" placeholder="Année academique" required autocomplete="annee" value="2021-2022">
+                                <input type="text" class="form-control @error('annee') is-invalid @enderror" name="annee" placeholder="Année academique" required autocomplete="annee" value="2021-2022" value= "{{$student->annee}}">
 
                                 @error('annee')
                                 <span class="invalid-feedback" role="alert">
@@ -99,7 +99,7 @@
                                 @enderror
                             </div>
                             <div class="col-md-6">
-                                <input type="file" class="form-control @error('photo') is-invalid @enderror" name="photo" required autocomplete="photo" accept="image/png, image/jpg, image/jpeg">
+                                <input type="file" class="form-control @error('photo') is-invalid @enderror" name="photo" autocomplete="photo" accept="image/png, image/jpg, image/jpeg" value= "{{$student->photo}}">
 
                                 @error('photo')
                                 <span class="invalid-feedback" role="alert">
